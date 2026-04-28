@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mango-yellow: #FFD700;
+  --color-mango-orange: #FF8C00;
+  --color-mango-red: #FF4500;
+  --color-mango-green: #2D5A27;
+  
+  --font-brand: "Caveat", cursive;
+  --font-sans: "Inter", sans-serif;
+  
+  --animate-float: float 6s ease-in-out infinite;
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@300;400;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+.font-brand {
+  font-family: var(--font-brand);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Custom Text Shadow for better readability over busy backgrounds */
+.text-shadow-lg {
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Improved card hover effects */
+.product-card {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Hide scrollbar but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
